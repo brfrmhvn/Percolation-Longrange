@@ -120,11 +120,11 @@ def main(zeta, func, ini_p, end_p, step_p):
 
     print(f'graph done - cost time: {(time.time()-st)/60} min')
     
-    with open(save_path+f'data/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'wb') as f:
+    with open(save_path+f'example/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'wb') as f:
         pickle.dump(G, f)
     #### generate new G
 
-    with open(save_path+f'data/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'rb') as f:
+    with open(save_path+f'example/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'rb') as f:
         G = pickle.load(f)
     nodes = len(list(G.nodes))
 
@@ -139,9 +139,9 @@ def main(zeta, func, ini_p, end_p, step_p):
             new_G_plot = G.subgraph(save_node).copy()
             sizes = giant_component_size_per_step(new_G, k)
             norm_size = [i/nodes for i in sizes]
-            np.save(save_path+f'data/{L}_avedeg{avg_degree}_{zeta}_{k}core_p{np.round(ini_p,3)}_sd{ti}_gcs_over_time.npy',norm_size)
+            np.save(save_path+f'example/{L}_avedeg{avg_degree}_{zeta}_{k}core_p{np.round(ini_p,3)}_sd{ti}_gcs_over_time.npy',norm_size)
 
-            update_nodes = np.random.choice(save_node,int(np.around(len(save_node)* (1-step_p))),replace=False)
+            update_nodes = np.random.choice(save_node,int(np.around(nodes* (1-step_p))),replace=False)
             #delete update_nodes from ini_nodes
             ini_nodes = update_nodes
 

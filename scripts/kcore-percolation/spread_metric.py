@@ -133,7 +133,7 @@ def main(zeta, func, ini_p, end_p, step_p):
     nyy = [y for x, y in positions.values()]
     max_var = np.var(nxx)+np.var(nyy)
 
-    with open(save_path+f'data/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'rb') as f:
+    with open(save_path+f'example/{L}_avedeg{avg_degree}_{func}_{zeta}.pkl', 'rb') as f:
         G = pickle.load(f)
     nodes = len(list(G.nodes))
 
