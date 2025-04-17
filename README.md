@@ -11,7 +11,7 @@ The primary goal is to compare two spatial connectivity models:
 Simulations are conducted on 2D grids with periodic boundary conditions, and analysis includes tracking the giant $k$-core component, determining percolation thresholds ($p_c$), measuring spatial spread ($\tilde{\sigma}$), and examining spatial cluster distributions.
 
 ## Environment Setup
-It is recommended to use conda or venv to create an independent Python environment. The code was tested using Python 3.x.
+It is recommended to use conda or venv to create an independent Python environment. The code was tested using Python >= 3.0.
 
 Create and activate environment:
 ```bash
