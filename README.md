@@ -5,10 +5,10 @@ This repository contains Python code to simulate and analyze k-core percolation 
 
 The primary goal is to compare two spatial connectivity models:
 
-- **Geometric Scaling Law Model**:   $$p_{ij} \propto d_{ij}^{-\alpha}$$Connection probability decays purely as a power law with distance.
-- **Exponential Decay Model**:   $$p_{ij} \propto d_{ij}^{-\alpha} e^{-\lambda d_{ij}}$$ $\text{ (with } \alpha=1 \text{ in the paper/code)}$Connection probability follows a power law combined with an exponential cutoff.
+- **Geometric Scaling Law Model**: Connection probability decays purely as a power law with distance, i.e., $$p_{ij} \propto d_{ij}^{-\alpha}$$.
+- **Exponential Decay Model**: Connection probability follows a power law combined with an exponential cutoff, i.e., $$p_{ij} \propto d_{ij}^{-\alpha} e^{-\lambda d_{ij}}$$ $\text{ (with } \alpha=1 \text{ in the paper/code)}$
 
-Simulations are run on 2D grids, and analysis includes tracking the giant k-core component, determining percolation thresholds ($p_c$), measuring spatial spread ($\tilde{\sigma}$), and examining spatial cluster distributions.
+Simulations are conducted on 2D grids with periodic boundary conditions, and analysis includes tracking the giant $k$-core component, determining percolation thresholds ($p_c$), measuring spatial spread ($\tilde{\sigma}$), and examining spatial cluster distributions.
 
 ## Environment Setup
 It is recommended to use conda or venv to create an independent Python environment. The code was tested using Python 3.x.
