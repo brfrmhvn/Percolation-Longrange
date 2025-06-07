@@ -1,4 +1,4 @@
-# [Delayed threshold and spatial diffusion in $k$-core percolation induced by long-range connectivity](https://www.nature.com/articles/s42005-025-02171-5#code-availability)
+# [Delayed threshold and spatial diffusion in k-core percolation induced by long-range connectivity](https://www.nature.com/articles/s42005-025-02171-5)
 
 ## Description
 This repository contains Python code to simulate and analyze k-core percolation in spatially embedded networks, focusing on the impact of different long-range connectivity models on network robustness. This work investigates how geometric constraints influence both structural integrity (phase transitions, percolation thresholds) and spatial organization (diffusion, clustering) during the percolation process.
